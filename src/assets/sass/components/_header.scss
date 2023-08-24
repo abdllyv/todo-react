@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  padding: 16px 0;
+  background: transparent;
+  .container {
+    .row {
+      justify-content: center;
+      align-items: center;
+      .nav-bar {
+        .nav-list {
+          width: 100%;
+          display: flex;
+          gap: 50px;
+          .nav-items {
+            a {
+              position: relative;
+              color: #bdb9b9;
+              transition: 0.3s;
+              font-size: 15px;
+              transition: 0.5s ease;
+              text-transform: capitalize;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #ff014f;
+                transform: scaleX(0);
+                transform-origin: right center;
+                transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+              }
+              &:hover {
+                color: #fff;
+                &::after {
+                  transition-duration: 0.4s;
+                  transform: scale(1);
+                  transform-origin: left center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
